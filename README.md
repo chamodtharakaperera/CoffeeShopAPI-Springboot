@@ -1,9 +1,10 @@
 # CoffeeShopAPI-Springboot
 
-COFFEE SHOP DELIVERY MAANAGEMENT API DOCUMENTATION
+COFFEE SHOP DELIVERY MANAGEMENT API DOCUMENTATION
 http://localhost:8080/swagger-ui/index.html
 
 DIRECTIONS BEFORE USE
+
 -This Springboot Application is pre configured to run on port 8080.
 
 -Once the Springboot API Successfully started running please visit this URL from your web browser http://localhost:8080/swagger-ui/index.html to get a clear understanding about how the API Works.
