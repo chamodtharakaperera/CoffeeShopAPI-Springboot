@@ -5,24 +5,39 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name="Customer")
 public class Customer {
 
+
 	@Id
 	private Long cusId;
+	
 	@Column(name = "cusFName")
 	private String cusFName;
+	
+	
 	@Column(name = "cusLName")
 	private String cusLName;
+	
+	
 	@Column(name = "cusAddress")
 	private String cusAddress;
+	
+	
 	@Column(name = "cusCity")
 	private String cusCity;
+	
+	
 	@Column(name = "cusState")
 	private String cusState;
+	
+	
 	@Column(name = "cusPostalCode")
 	private Integer cusPostalCode;
+	
+	
 	@Column(name = "cusTel")
 	private String cusTel;
 	
