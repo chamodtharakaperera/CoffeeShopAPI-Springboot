@@ -56,6 +56,7 @@ public class CustomerController {
 		customer.setCusFName(customerDetails.getCusFName());
 		customer.setCusLName(customerDetails.getCusLName());
 		customer.setCusCity(customerDetails.getCusCity());
+		customer.setCusAddress(customerDetails.getCusAddress());
 		customer.setCusTel(customerDetails.getCusTel());
 		customer.setCusPostalCode(customerDetails.getCusPostalCode());
 		customer.setCusState(customerDetails.getCusState());

@@ -1,25 +1,23 @@
 package com.pearson.coffee.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.CreationTimestamp;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table(name="Payment")
 public class Payment {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long paymentId;
 	private Long cusId;
-	@CreationTimestamp
+	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date paymentDate;
 	@Column(name = "payment_Amount")
 	private Double payment_Amount;

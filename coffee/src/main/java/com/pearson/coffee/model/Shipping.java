@@ -1,26 +1,24 @@
 package com.pearson.coffee.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.CreationTimestamp;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table(name="Shipping")
 public class Shipping {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long shippingId;
 	private Long couriercompId;
 	private Long orderId;
-	@CreationTimestamp
+	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date shipped_Date;
 	@Column(name = "shipping_Status")
 	private String shipping_Status;

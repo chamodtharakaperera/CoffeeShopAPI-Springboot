@@ -2,8 +2,6 @@ package com.pearson.coffee.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -12,12 +10,13 @@ import javax.persistence.Table;
 public class Customer {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long cusId;
 	@Column(name = "cusFName")
 	private String cusFName;
 	@Column(name = "cusLName")
 	private String cusLName;
+	@Column(name = "cusAddress")
+	private String cusAddress;
 	@Column(name = "cusCity")
 	private String cusCity;
 	@Column(name = "cusState")
@@ -68,6 +67,12 @@ public class Customer {
 	}
 	public void setCusTel(String cusTel) {
 		this.cusTel = cusTel;
+	}
+	public String getCusAddress() {
+		return cusAddress;
+	}
+	public void setCusAddress(String cusAddress) {
+		this.cusAddress = cusAddress;
 	}
 	
 	
