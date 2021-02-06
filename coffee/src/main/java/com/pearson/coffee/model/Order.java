@@ -11,7 +11,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
-@Table(name = "Order")
+@Table(name ="Order_Table")
 public class Order {
 
 	@Id

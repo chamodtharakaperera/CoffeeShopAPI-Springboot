@@ -26,7 +26,7 @@ public class PaymentController {
 	private PaymentRepository paymentRepo;
 
 	// Get All Payment Details
-	@GetMapping("/all")
+	@GetMapping("/payment")
 	public List<Payment> getAllPaymentDetails() {
 		return paymentRepo.findAll();
 	}

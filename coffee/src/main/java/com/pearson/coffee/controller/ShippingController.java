@@ -20,26 +20,26 @@ import com.pearson.coffee.repository.ShippingRepository;
 
 
 @RestController
-@RequestMapping("//rest/v2")
+@RequestMapping("/rest/v2")
 public class ShippingController {
 
 	@Autowired
 	private ShippingRepository shipRepo;
 
 	// Get All Shipping Details
-	@GetMapping("/all")
+	@GetMapping("/shipping")
 	public List<Shipping> getAllShippingDetails() {
 		return shipRepo.findAll();
 	}
 
 	// Create Shipping Details
-	@PostMapping("/create")
+	@PostMapping("/shipping")
 	public Shipping createShippingDetails(@Valid @RequestBody Shipping shipping) {
 		return shipRepo.save(shipping);
 	}
 
 	// Get Shipping Details By Id
-	@GetMapping("select/{shippingId}")
+	@GetMapping("shipping/{shippingId}")
 	public ResponseEntity<Shipping> getShippingById(@PathVariable(value = "shippingId") long shippingId)
 			throws ResourceNotFoundException {
 		Shipping shipping = shipRepo.findById(shippingId).orElseThrow(
@@ -48,7 +48,7 @@ public class ShippingController {
 	}
 
 	// Update Shipping By Id
-	@PutMapping("/update/{shippingId}")
+	@PutMapping("/shipping/{shippingId}")
 	public ResponseEntity<Shipping> updateShippingById(@PathVariable(value = "shippingId") long shippingId,
 			@RequestBody Shipping shippingDetails) throws ResourceNotFoundException {
 		Shipping shipping = shipRepo.findById(shippingId).orElseThrow(
@@ -62,7 +62,7 @@ public class ShippingController {
 	}
 
 	// Delete Shipping By Id
-	@DeleteMapping("/delete/{shippingId}")
+	@DeleteMapping("/shipping/{shippingId}")
 	public ResponseEntity<?> deleteShippingById(@PathVariable(value = "shippingId") long shippingId)
 			throws ResourceNotFoundException {
 		shipRepo.findById(shippingId).orElseThrow(

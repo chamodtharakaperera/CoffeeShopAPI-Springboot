@@ -20,7 +20,7 @@ import com.pearson.coffee.model.Product;
 import com.pearson.coffee.repository.ProductRepository;
 
 @RestController
-@RequestMapping("//rest/v2")
+@RequestMapping("/rest/v2")
 public class ProductController {
 
 	@Autowired
